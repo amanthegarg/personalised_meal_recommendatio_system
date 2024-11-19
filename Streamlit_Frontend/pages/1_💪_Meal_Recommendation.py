@@ -6,9 +6,6 @@ from ImageFinder.ImageFinder import get_images_links as find_image
 from streamlit_echarts import st_echarts
 
 st.set_page_config(page_title="Automatic Meal Recommendation", page_icon="💪",layout="wide")
-
-
-
 nutritions_values=['Calories','FatContent','SaturatedFatContent','CholesterolContent','SodiumContent','CarbohydrateContent','FiberContent','SugarContent','ProteinContent']
 # Streamlit states initialization
 if 'person' not in st.session_state:
@@ -109,7 +106,7 @@ class Display:
                 st.metric(label=plan,value=f'{round(maintain_calories*weight)} Calories/day',delta=loss,delta_color="inverse")
 
     def display_recommendation(self,person,recommendations):
-        st.header('DIET RECOMMENDATOR')  
+        st.header('MEAL RECOMMENDATOR')  
         with st.spinner('Generating recommendations...'): 
             meals=person.meals_calories_perc
             st.subheader('Recommended recipes:')
@@ -240,7 +237,7 @@ class Display:
         
 
 display=Display()
-title="<h1 style='text-align: center;'>Automatic Diet Recommendation</h1>"
+title="<h1 style='text-align: center;'>Automatic Meal Recommendation</h1>"
 st.markdown(title, unsafe_allow_html=True)
 with st.form("recommendation_form"):
     st.write("Modify the values and click the Generate button to use")

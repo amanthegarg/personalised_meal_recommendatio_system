@@ -98,7 +98,7 @@ class Display:
             st_echarts(options=options, height="600px",)
             st.caption('You can select/deselect an item (nutrition value) from the legend.')
 
-title="<h1 style='text-align: center;'>Custom Food Recommendation</h1>"
+title="<h1 style='text-align: center;'>Custom Meal Recommendation</h1>"
 st.markdown(title, unsafe_allow_html=True)
 
 
