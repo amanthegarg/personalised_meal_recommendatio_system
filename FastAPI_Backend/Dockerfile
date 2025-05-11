@@ -1,6 +1,6 @@
 # backend/Dockerfile
 
-FROM python:3.10
+FROM python:3.10.8
 
 RUN mkdir -p app/backend
 
